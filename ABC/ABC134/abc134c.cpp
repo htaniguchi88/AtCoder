@@ -17,12 +17,25 @@ int main()
 
     rep(i, N) cin >> V[i];
 
+    vector<int> V_CP(N);
+
+    V_CP = V;
+
+    sort(V.begin(), V.end());
+
+    int V_MAX = V[N-1];
+    int V_SECOND = V[N-2];
+
     rep(i, N)
     {
-        temp = V[i];
-        V.erase(V.begin()+i);
-        cout << *max_element(V.begin(), V.end()) << "\n";
-        V.insert(V.begin()+i, temp);
+        if(V_CP[i] != V_MAX)
+        {
+            cout << V_MAX << "\n";
+        }
+        else
+        {
+            cout << V_SECOND << "\n";
+        }
     }
 
     return 0;
