@@ -8,17 +8,22 @@ int main()
     cin.tie(0);
     ios::sync_with_stdio(false);
 
-    int A, B;
+    int N, D;
+    int unit;
 
-    cin >> A >> B;
+    cin >> N >> D;
 
-    if (A < 1 || B < 1 || A > 9 || B > 9)
+    unit = 2 * D + 1;
+
+    rep(i, N)
     {
-        cout << -1;
+        if (unit >= N)
+        {
+            cout << i+1;
+            break;
+        }
+        unit += 2 * D + 1;
     }
-    else
-    {
-        cout << A * B;
-    }
+
     return 0;
 }

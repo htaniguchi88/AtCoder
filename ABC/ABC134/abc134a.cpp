@@ -8,17 +8,11 @@ int main()
     cin.tie(0);
     ios::sync_with_stdio(false);
 
-    int A, B;
+    int r;
 
-    cin >> A >> B;
+    cin >> r;
 
-    if (A < 1 || B < 1 || A > 9 || B > 9)
-    {
-        cout << -1;
-    }
-    else
-    {
-        cout << A * B;
-    }
+    cout << 3 * r * r;
+
     return 0;
 }
